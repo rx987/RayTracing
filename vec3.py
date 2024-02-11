@@ -93,3 +93,4 @@ class Vec3:
     # return the unit_vector of a given vector
     def unit_vector(self):
         return self.e / self.length()
+
