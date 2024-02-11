@@ -10,6 +10,8 @@ def main():
     print(f"P3\n{IMAGE_WIDTH} {IMAGE_HEIGHT}\n255")
 
     for j in range(0, IMAGE_HEIGHT):
+        # adding a progress indicator
+        print(f"\rScanlines remaining: {IMAGE_HEIGHT - j} ", end="")
         for i in range(0, IMAGE_WIDTH):
             r = float(i) / (IMAGE_WIDTH - 1)
             g = float(j) / (IMAGE_HEIGHT - 1)
@@ -20,7 +22,7 @@ def main():
             ib = int(255.999 * b)
 
             print(f"{ir} {ig} {ib}")
-
+    print(f"\rDone.                 \n",end='')
 
 if __name__ == "__main__":
     main()
