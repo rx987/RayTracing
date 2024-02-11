@@ -94,3 +94,15 @@ class Vec3:
     def unit_vector(self):
         return self.e / self.length()
 
+
+## defining a color utility function
+def write_color(pixel_color):
+    res = (
+        Vec3.print(int(255.999 * pixel_color.x()))
+        + " "
+        + Vec3.print(int(255.999 * pixel_color.y()))
+        + " "
+        + Vec3.print(int(255.999 * pixel_color.z()))
+    )
+    return res
+
